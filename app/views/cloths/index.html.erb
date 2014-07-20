@@ -1,0 +1,16 @@
+<%= link_to 'new cloth', new_cloth_path %>
+
+    <ul>
+		<% @cloths.each do |cloth| %>
+		<li>
+			<%= cloth.name%>
+            <%= cloth.color%>
+            <%= cloth.size%>
+            <%= cloth.production%>
+            <%= cloth.price%> 
+			
+			<%= link_to "show", cloth_path(cloth) %>
+            <%= link_to "delete", cloth_path(cloth)  , :method => :delete %>
+		</li>
+		<% end %>
+	</ul>

@@ -1,0 +1,36 @@
+<%= form_for@cloth do |f|%>
+
+<% if @cloth.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cloth.errors.count, "error") %> prohibited this menu from being saved:</h2>
+
+      <ul>
+      <% @cloth.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<%= f.label :name,'name' %>
+<%= f.text_field :name %>
+
+<%= f.label :color,'color' %>
+<%= f.text_field :color %>
+
+<%= f.label :size,'size' %>
+<%= f.text_field :size %>
+
+<%= f.label :production,'production' %>
+<%= f.text_field :production %>
+
+<%= f.label :price,'price' %>
+<%= f.text_field :price %>
+
+<%= f.label :amount,'amount' %>
+<%= f.text_field :amount %>
+
+<%=f.submit%>
+
+<% end %>

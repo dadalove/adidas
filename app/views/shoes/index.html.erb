@@ -1,0 +1,27 @@
+<h1>adidas</h1>
+
+       <%= link_to "new shoe", new_shoe_path %>
+
+
+
+    <ul>
+       <% @shoes.each do |shoe|%>
+      <li>
+          <%= link_to "show", shoe_path(shoe) %>
+          <%= link_to "delete", shoe_path(shoe)  , :method => :delete %>
+
+          <%= shoe.name%>
+          <%= shoe.color%>
+          <%= shoe.size%>
+          <%= shoe.production%>
+          <%= shoe.price%>
+          <%= shoe.amount%>
+      </li>
+       <% end %>
+    </ul>
+
+
+
+      <%= link_to "new cloth", new_cloth_path %>
+        
+
